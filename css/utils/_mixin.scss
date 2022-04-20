@@ -1,0 +1,16 @@
+@mixin flex($justify: center, $items: center, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $items;
+    flex-direction: $direction;
+}
+
+@mixin main_title {
+    font-family: $serif;
+    font-size: 2rem;
+}
+
+@mixin bloc ($bg: $white) {
+    background-color: $bg;
+    padding: 20px;
+}

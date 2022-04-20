@@ -1,0 +1,19 @@
+.intro {
+    @include flex(space-around, center, column);
+    @include bloc($color-bg);
+    text-align: center;
+
+    &__content{
+        font-weight: $light;
+        margin: $margin-content;
+    }
+}
+
+section.fonctionnement {
+    @include flex (space-around, left, column);
+    @include bloc ($white);
+
+    div.steps { 
+        @include flex (space-between, center, column);
+    }
+}

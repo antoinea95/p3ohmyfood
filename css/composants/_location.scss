@@ -1,0 +1,14 @@
+section.location {
+    width: 100%;
+    height: 7vh;
+    background-color: #eaeaea;
+    @include flex;
+    box-shadow: inset 0 10px 10px -10px rgba($color: black, $alpha: 0.6); 
+
+    p, i{
+        font-weight: $bold;
+        font-size: 1rem;
+        color: #353535;
+        padding-right: 20px;
+    }
+}
