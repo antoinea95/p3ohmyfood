@@ -1,3 +1,5 @@
+// cartes étapes
+
 div.steps__card{
     background-color: $color-bg;
     border-radius: $card-radius;
@@ -6,6 +8,9 @@ div.steps__card{
     @include flex (flex-start, center, row);
     width: 95%;
     height: 10vh;
+    box-shadow: $shadow;
+
+    // positionnement bulle nombre
 
     &--number {
         position: absolute;
@@ -21,6 +26,8 @@ div.steps__card{
         font-size: .8rem;
     }
 
+    // positionnement corps de la carte
+
     &--body {
         @include flex (flex-start, center, row);
         font-weight: $bold;
@@ -29,7 +36,87 @@ div.steps__card{
             @include flex;
             width: 60px;
             padding: 0 10px;
+            font-size: 1.2rem;
         }
     }
 
 }
+
+// cartes restaurants
+
+.restaurant__card {
+    position: relative;
+    width: 95%;
+    border-radius: $card-radius;
+    margin: 10px;
+    box-shadow: $shadow;
+
+    a {
+        text-decoration: none;
+        color: $color-txt;
+    }
+
+    //bandeau nouveau
+
+    &--new {
+        background-color: $color-tertiary;
+        color: darken($color-tertiary, 50%);
+        font-weight: $bold;
+        font-size: .9rem;
+        border-radius: 3px;
+        padding: 6px 10px;
+        position: absolute;
+        right: 4%;
+        top: 6%;
+        z-index: 1;
+
+    }
+
+    // positionnement image
+
+    &--img {
+        border-radius: $card-radius $card-radius 0 0;
+        position: relative;
+        overflow: hidden;
+        height: 25vh;
+
+        img {
+            position: absolute;
+            object-fit: cover;
+        }
+        
+        &1 {
+            top: -30%;
+        }
+
+        &2 {
+            top: -90%;
+        }
+
+        &3 {
+            top: -30%;
+        }
+
+        &4 {
+            top: -30%;
+        }
+    }
+
+    // positionnement corps de la carte
+
+    &--body {
+        @include flex (space-between, center, row);
+        padding: 15px;
+        border-radius: 0 0 $card-radius $card-radius;
+        background-color: $white;
+
+        &Text p {
+            font-size: 1.1rem;
+            font-weight: $light;   
+        }
+
+    }
+
+}
+
+

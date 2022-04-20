@@ -15,5 +15,15 @@ section.fonctionnement {
 
     div.steps { 
         @include flex (space-between, center, column);
+        margin: 10px;
+    }
+}
+
+article.article1 {
+    @include flex (space-around, left, column);
+    @include bloc ($color-bg);
+
+    div.restaurants {
+        @include flex(space-between, center, column);
     }
 }

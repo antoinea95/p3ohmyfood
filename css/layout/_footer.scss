@@ -1,0 +1,33 @@
+.footer {
+    background-color: darken($color-bg, 75%);
+    padding: 20px 10px 20px 10px;
+
+    &__title h4 {
+        font-family: $serif;
+        color: $white;
+        font-size: 1.2rem;
+        margin: 10px;
+    }
+
+    &__list {
+        list-style-type: none;
+        margin: 10px;
+
+        li {
+            padding: 5px 0;
+            @include flex (flex-start, center, row);
+            
+            a {
+                text-decoration: none;
+                color: $white;
+                font-family: $sans-serif;
+            }
+
+            i {
+                width: 30px;
+                padding-right: 30px;
+            }
+
+        }
+    }
+}

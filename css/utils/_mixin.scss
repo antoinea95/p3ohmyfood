@@ -8,9 +8,17 @@
 @mixin main_title {
     font-family: $serif;
     font-size: 2rem;
+    color: black;
+}
+
+@mixin second_title ($size) {
+    font-family: $sans-serif;
+    color: black;
+    font-weight: $bold;
+    font-size: $size;
 }
 
 @mixin bloc ($bg: $white) {
     background-color: $bg;
-    padding: 20px;
+    padding: 40px 10px 40px 10px; 
 }

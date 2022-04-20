@@ -12,7 +12,8 @@ $bold: 700;
 
 body {
     font-family: $sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    color: $color-txt;
 }
 
 h1.logo__title {
@@ -26,9 +27,13 @@ h1.menu__title {
 }
 
 main.main h2 {
-    font-size: 1.5rem;
-    font-weight: $bold;
+    @include second_title(1.5rem);
     margin: 0 10px 10px 10px;
+}
+
+h3 {
+    @include second_title(1.2rem);
+    margin-bottom: 5px;
 }
 
 
