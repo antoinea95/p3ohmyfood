@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--link-->
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../sass/main.css">
     
     <!-- script -->
     <script src="https://kit.fontawesome.com/c8c62b8630.js" crossorigin="anonymous"></script>
@@ -29,15 +29,24 @@
         <article class="menu">
 
             <div class="menu__img">
-                <img src="../images/restaurants/palettedugout.jpg" alt="La palette du Goût">
+                <img src="../images/restaurants/palettedugout.jpg" alt="La palette du Goût" class="menu__img1">
             </div>
 
             <div class="menu__content">
-                <h1 class="menu__title">La palette du goût</h1>
 
-                <section class="starter">
+                <div class="menu__title">
+                    <h1>La palette du goût</h1>
+                    <span class="btn__heart">
+                        <i class="fa-regular fa-heart"></i>
+                    </span>
+                </div>
 
-                    <h2 class="section__title">Entrées</h2>
+                <section class="section">
+
+                    <div class="section__title">
+                        <h2>Entrées</h2>
+                        <div class="section__title--underline"></div>
+                    </div>
 
                     <div class="menu__card">
                         <a href="#">
@@ -71,9 +80,12 @@
 
                 </section>
 
-                <section class="meal">
+                <section class="section">
 
-                    <h2 class="section__title">Plats</h2>
+                    <div class="section__title">
+                        <h2>Plats</h2>
+                        <div class="section__title--underline"></div>
+                    </div>
 
                     <div class="menu__card">
                         <a href="#">
@@ -107,9 +119,12 @@
 
                 </section>
 
-                <section class="desert">
+                <section class="section">
 
-                    <h2 class="section__title">Desserts</h2>
+                    <div class="section__title">
+                        <h2>Desserts</h2>
+                        <div class="section__title--underline"></div>
+                    </div>
 
                     <div class="menu__card">
                         <a href="#">
@@ -143,9 +158,11 @@
 
                 </section>
 
-                <div class="btn">
-                    <a href="#" class="btn__link">Commander</a>
-                </div>
+                <section class="bloc__btn">
+                    <div class="btn">
+                        <a href="#" class="btn__link">Commander</a>
+                    </div>
+                </section>
 
             </div>
 

@@ -1,0 +1,52 @@
+
+div.menu__content {
+    @include bloc ($color-bg);
+    border-radius: 35px 35px 0 0;
+}
+
+.menu__img {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    z-index: -1;
+
+    img {
+        position: fixed;
+    }
+
+    &1, &3, &4 {
+        top: 9%;
+    }
+
+    &2 {
+        top: -5%;
+    }
+}
+
+div.menu__title {
+    @include flex(space-between, center, row);
+    margin: 0px 15px 10px 15px;
+}
+
+section.section {
+    @include flex(space-between, flex-start, column);
+    padding: 15px 10px;
+}
+
+.section__title {
+    margin-bottom: 5px;
+
+    h2 {
+        margin-bottom: 5px;
+    }
+
+    &--underline {
+        background-color: $color-tertiary;
+        width: 40px;
+        height: 3px;
+    }
+}
+
+section.bloc__btn {
+    @include flex;
+}

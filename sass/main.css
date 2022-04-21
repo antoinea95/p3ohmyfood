@@ -55,15 +55,15 @@ body {
 
 h1.logo__title {
   font-family: "Shrikhand", serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: black;
   text-align: center;
   padding: 10px;
 }
 
-h1.menu__title {
+div.menu__title h1 {
   font-family: "Shrikhand", serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: black;
 }
 
@@ -72,7 +72,11 @@ main.main h2 {
   color: black;
   font-weight: 700;
   font-size: 1.5rem;
-  margin: 0 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
+}
+
+.section__title h2 {
+  text-transform: uppercase;
 }
 
 h3 {
@@ -83,9 +87,50 @@ h3 {
   margin-bottom: 5px;
 }
 
+.menu__card h3 {
+  font-family: "Roboto", Helvetica, sans-serif;
+  color: black;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
 div.container {
   height: 100vh;
   margin: auto;
+}
+
+header.header {
+  background-color: #fff;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  height: 9vh;
+  top: 0;
+}
+
+div.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: 20px;
+}
+
+div.logo a {
+  padding-right: 17%;
+  font-size: 1.3rem;
+  color: black;
 }
 
 .footer {
@@ -164,10 +209,14 @@ div.container {
   font-size: 1rem;
 }
 
+span.btn__heart {
+  font-size: 1.4rem;
+}
+
 div.steps__card {
   background-color: #f6f6f6;
   border-radius: 15px;
-  margin: 10px;
+  margin: 10px 0;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -252,9 +301,9 @@ div.steps__card--body i {
 
 .restaurant__card {
   position: relative;
-  width: 95%;
+  width: 100%;
   border-radius: 15px;
-  margin: 10px;
+  margin: 10px 0;
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -288,6 +337,8 @@ div.steps__card--body i {
   position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 .restaurant__card--img1 {
@@ -330,7 +381,50 @@ div.steps__card--body i {
   font-weight: 300;
 }
 
+.menu__card {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.menu__card a {
+  text-decoration: none;
+  color: #4d4d4d;
+}
+
+.menu__card--body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: 5px;
+}
+
+.menu__card--body :nth-child(1) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menu__card--body :nth-child(2) {
+  font-weight: 700;
+}
+
 section.location {
+  margin-top: 9vh;
   width: 100%;
   height: 7vh;
   background-color: #eaeaea;
@@ -372,30 +466,18 @@ section.location p, section.location i {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #f6f6f6;
-  padding: 40px 10px 40px 10px;
+  padding: 30px 10px 30px 10px;
   text-align: center;
 }
 
 .intro__content {
   font-weight: 300;
-  margin: 15px 0;
+  margin: 15px 10px;
 }
 
 section.fonctionnement {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   background-color: #fff;
-  padding: 40px 10px 40px 10px;
+  padding: 30px 10px 30px 10px;
 }
 
 section.fonctionnement div.steps {
@@ -412,24 +494,12 @@ section.fonctionnement div.steps {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 10px;
+  margin: 15px 10px;
 }
 
 article.article1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   background-color: #f6f6f6;
-  padding: 40px 10px 40px 10px;
+  padding: 30px 10px 30px 10px;
 }
 
 article.article1 div.restaurants {
@@ -446,5 +516,95 @@ article.article1 div.restaurants {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 15px 10px;
+}
+
+div.menu__content {
+  background-color: #f6f6f6;
+  padding: 30px 10px 30px 10px;
+  border-radius: 35px 35px 0 0;
+}
+
+.menu__img {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  z-index: -1;
+}
+
+.menu__img img {
+  position: fixed;
+}
+
+.menu__img1, .menu__img3, .menu__img4 {
+  top: 9%;
+}
+
+.menu__img2 {
+  top: -5%;
+}
+
+div.menu__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0px 15px 10px 15px;
+}
+
+section.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 15px 10px;
+}
+
+.section__title {
+  margin-bottom: 5px;
+}
+
+.section__title h2 {
+  margin-bottom: 5px;
+}
+
+.section__title--underline {
+  background-color: #99E2D0;
+  width: 40px;
+  height: 3px;
+}
+
+section.bloc__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 /*# sourceMappingURL=main.css.map */

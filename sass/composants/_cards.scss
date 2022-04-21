@@ -3,7 +3,7 @@
 div.steps__card{
     background-color: $color-bg;
     border-radius: $card-radius;
-    margin: 10px;
+    margin: $margin-card;
     padding: 10px;
     @include flex (flex-start, center, row);
     width: 95%;
@@ -46,9 +46,9 @@ div.steps__card{
 
 .restaurant__card {
     position: relative;
-    width: 95%;
+    width: 100%;
     border-radius: $card-radius;
-    margin: 10px;
+    margin: $margin-card;
     box-shadow: $shadow;
 
     a {
@@ -75,7 +75,7 @@ div.steps__card{
     // positionnement image
 
     &--img {
-        border-radius: $card-radius $card-radius 0 0;
+        border-radius: $bloc-radius 0 0;
         position: relative;
         overflow: hidden;
         height: 25vh;
@@ -83,6 +83,7 @@ div.steps__card{
         img {
             position: absolute;
             object-fit: cover;
+            transform: scale(1.01);
         }
         
         &1 {
@@ -107,7 +108,7 @@ div.steps__card{
     &--body {
         @include flex (space-between, center, row);
         padding: 15px;
-        border-radius: 0 0 $card-radius $card-radius;
+        border-radius: 0 0 $bloc-radius;
         background-color: $white;
 
         &Text p {
@@ -117,6 +118,37 @@ div.steps__card{
 
     }
 
+}
+
+// cartes des plats
+
+.menu__card {
+    width: 100%;
+    background-color: $white;
+    border-radius: $card-radius;
+    box-shadow: $shadow;
+    margin: $margin-card;
+    padding: 10px;
+
+    a {
+        text-decoration: none;
+        color: $color-txt;
+    }
+
+    &--body {
+        @include flex(space-between, center, row);
+        margin-right: 5px;
+
+        :nth-child(1) {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        :nth-child(2) {
+            font-weight: $bold;
+        }
+    }
 }
 
 

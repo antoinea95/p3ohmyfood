@@ -1,3 +1,4 @@
+
 .intro {
     @include flex(space-around, center, column);
     @include bloc($color-bg);
@@ -10,20 +11,17 @@
 }
 
 section.fonctionnement {
-    @include flex (space-around, left, column);
     @include bloc ($white);
 
-    div.steps { 
-        @include flex (space-between, center, column);
-        margin: 10px;
+    div.steps {
+        @include bloc__content;
     }
 }
 
 article.article1 {
-    @include flex (space-around, left, column);
     @include bloc ($color-bg);
 
     div.restaurants {
-        @include flex(space-between, center, column);
+        @include bloc__content;
     }
 }

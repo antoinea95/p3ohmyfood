@@ -1,4 +1,4 @@
-@mixin flex($justify: center, $items: center, $direction: row) {
+@mixin flex ($justify: center, $items: center, $direction: row) {
     display: flex;
     justify-content: $justify;
     align-items: $items;
@@ -7,7 +7,7 @@
 
 @mixin main_title {
     font-family: $serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: black;
 }
 
@@ -18,7 +18,14 @@
     font-size: $size;
 }
 
+@mixin bloc__content {
+        @include flex(space-between, center, column);
+        margin: $margin-content;
+    }
+
+
+
 @mixin bloc ($bg: $white) {
     background-color: $bg;
-    padding: 40px 10px 40px 10px; 
+    padding: 30px 10px 30px 10px; 
 }

@@ -22,18 +22,26 @@ h1.logo__title {
     padding: 10px;
 }
 
-h1.menu__title {
+div.menu__title h1 {
     @include main_title;
 }
 
 main.main h2 {
     @include second_title(1.5rem);
-    margin: 0 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+}
+
+.section__title h2 {
+    text-transform: uppercase;
 }
 
 h3 {
     @include second_title(1.2rem);
     margin-bottom: 5px;
+}
+
+.menu__card h3 {
+    @include second_title(1.1rem);
 }
 
 
