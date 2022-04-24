@@ -1,4 +1,5 @@
 @import "./utils/variables";
+@import "./utils/map";
 @import "./utils/mixin";
 
 @import "./base/reset";
@@ -7,6 +8,7 @@
 @import "./layout/container";
 @import "./layout/header";
 @import "./layout/footer";
+@import "./layout/maingrid";
 
 @import "./composants/button";
 @import "./composants/cards"; 

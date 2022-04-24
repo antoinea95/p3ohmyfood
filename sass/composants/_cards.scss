@@ -1,20 +1,31 @@
 // cartes étapes
 
 div.steps__card{
+    position: relative;
     background-color: $color-bg;
     border-radius: $card-radius;
     margin: $margin-card;
-    padding: 10px;
     @include flex (flex-start, center, row);
     width: 95%;
-    height: 10vh;
+    max-width: 400px;
     box-shadow: $shadow;
+    white-space: nowrap;
+
+    &:hover {
+        background-color: rgba($color-primary, 0.2);
+        color: $color-primary;
+    }
+
+    @include tablet-screen {
+        @include flex(center,center,row);
+        width: 32%;
+    }
 
     // positionnement bulle nombre
 
     &--number {
         position: absolute;
-        left: 0.3rem;
+        left: -6%;
         margin-left: 3%;
         background-color: $color-primary;
         height: 25px;
@@ -24,6 +35,15 @@ div.steps__card{
         color: $white;
         font-weight: $light;
         font-size: .8rem;
+
+        @include tablet-screen {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            top: -20%;
+         }
     }
 
     // positionnement corps de la carte
@@ -31,12 +51,27 @@ div.steps__card{
     &--body {
         @include flex (flex-start, center, row);
         font-weight: $bold;
+        padding: 25px;
+
+        @include tablet-screen {
+            @include flex (space-around, center, row);
+            padding: 25px 20px;
+         }
 
         i {
             @include flex;
-            width: 60px;
-            padding: 0 10px;
+            width: 50px;
             font-size: 1.2rem;
+
+
+            @include tablet-screen {
+                width: 20px;
+             }
+        }
+
+        p {
+            padding-left: 7%;
+            color: $color-txt;
         }
     }
 
@@ -50,6 +85,7 @@ div.steps__card{
     border-radius: $card-radius;
     margin: $margin-card;
     box-shadow: $shadow;
+
 
     a {
         text-decoration: none;
@@ -78,29 +114,14 @@ div.steps__card{
         border-radius: $bloc-radius 0 0;
         position: relative;
         overflow: hidden;
-        height: 25vh;
+        height: 190px;
 
         img {
-            position: absolute;
             object-fit: cover;
-            transform: scale(1.01);
-        }
-        
-        &1 {
-            top: -30%;
+            height: 100%;
+            width: 100%;
         }
 
-        &2 {
-            top: -90%;
-        }
-
-        &3 {
-            top: -30%;
-        }
-
-        &4 {
-            top: -30%;
-        }
     }
 
     // positionnement corps de la carte
@@ -128,7 +149,8 @@ div.steps__card{
     border-radius: $card-radius;
     box-shadow: $shadow;
     margin: $margin-card;
-    padding: 10px;
+    padding: 12px;
+
 
     a {
         text-decoration: none;
@@ -147,6 +169,7 @@ div.steps__card{
 
         :nth-child(2) {
             font-weight: $bold;
+            padding-left: 10px;
         }
     }
 }

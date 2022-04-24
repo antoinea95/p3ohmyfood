@@ -29,3 +29,25 @@
     background-color: $bg;
     padding: 30px 10px 30px 10px; 
 }
+
+// Responsive
+
+@mixin tablet-screen {
+    @media screen and (min-width:map-get($breakpoints, tablet)) {
+        @content;
+    }
+    
+}
+
+@mixin desktop-screen {
+    @media screen and (min-width:map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
+@mixin screen-max-width ($screen) {
+    max-width: $screen;
+    margin: auto;
+}
+
+

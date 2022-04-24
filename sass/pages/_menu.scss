@@ -2,6 +2,22 @@
 div.menu__content {
     @include bloc ($color-bg);
     border-radius: 35px 35px 0 0;
+
+}
+
+div.menu__content--sections {
+    
+    @include tablet-screen {
+        @include flex (space-between, flex-start, row);
+        flex-wrap: wrap;
+        @include screen-max-width ($tablet-width);
+    }
+
+    @include desktop-screen {
+        @include screen-max-width ($desktop-width);
+    }
+
+    
 }
 
 .menu__img {
@@ -11,26 +27,39 @@ div.menu__content {
     z-index: -1;
 
     img {
+        object-fit: cover;
         position: fixed;
+        height: 350px;
+        width: 100%;
+
     }
 
-    &1, &3, &4 {
-        top: 9%;
-    }
-
-    &2 {
-        top: -5%;
-    }
 }
 
 div.menu__title {
     @include flex(space-between, center, row);
     margin: 0px 15px 10px 15px;
+
+    @include tablet-screen {
+        @include screen-max-width ($tablet-width);
+    }
+
+    @include desktop-screen {
+        @include screen-max-width ($desktop-width);
+    }
 }
 
 section.section {
     @include flex(space-between, flex-start, column);
     padding: 15px 10px;
+
+    @include tablet-screen {
+        width: 50%;
+     }
+
+    @include desktop-screen {
+        width: 33%;
+    }
 }
 
 .section__title {
