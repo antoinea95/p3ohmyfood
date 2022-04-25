@@ -1,21 +1,87 @@
-.btn {
-    @include flex;
-    background: linear-gradient(0deg, $color-primary, $color-secondary);
-    width: 230px;
-    height: 50px;
-    border-radius: 50px;
-    margin: 15px 0 20px 0;
-    box-shadow: $shadow;
+// Bouton principal
 
-    &__link {
-        text-decoration: none;
-        font-weight: $bold;
-        color: #fff;
-        font-size: 1rem;
+.btn {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    @include btn__shape;
+    box-shadow: $shadow;
+    background: $color-gradient;
+    @include flex; // centre le texte du bouton
+    margin: 15px 0 20px 0;
+    font-weight: $bold;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 250ms;
+
+    &:hover {
+        box-shadow: 5px 5px 5px rgba($color: black, $alpha: 0.5);
+        &::after {
+            opacity: 0.2;
+        }
+    } // Anime l'opacité du pseudo-élément after et modifie l'ombre portée
+
+    &::after {
+        content: "";
+        position: absolute;
+        @include btn__shape;
+        background-color: $white; 
+        opacity: 0;
+}
+
+}
+
+
+// Bouton coeur
+
+.checkbox__heart {
+    position: relative;
+    margin-bottom: 6px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    input[type="checkbox"] {
+        display:none;
+    }
+      
+    input[type="checkbox"]:checked~.checkbox__heart--checked {
+        display: block;
+        transform: scale(1.2);
+    }
+
+    &--unchecked {
+        @include heart($color-txt);
+        transition: transform 250ms ease-in-out;
+        
+        &:hover {
+          transform: scale(1.2);
+          &::after {
+            opacity: 1;
+          }
+        }
+        
+        &::after {
+          content: "\f004";
+          @include heart__gradient;
+          opacity: 0;
+          transform: scale(1);
+          transition: transform 250ms ease-in-out;
+        }
+    }
+
+    &--checked {
+        @include heart__gradient;
+        transform: scale(0);
+        opacity: 1;
+        transition: transform 250ms ease-in-out;
     }
 }
+  
+  
 
-span.btn__heart {
-    font-size: 1.4rem;
-}
+
+
+
+
 

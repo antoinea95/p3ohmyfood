@@ -38,10 +38,11 @@ div.menu__content--sections {
 
 div.menu__title {
     @include flex(space-between, center, row);
-    margin: 0px 15px 10px 15px;
+    margin: 10px 15px 10px 15px;
 
     @include tablet-screen {
         @include screen-max-width ($tablet-width);
+        width: 97%;
     }
 
     @include desktop-screen {

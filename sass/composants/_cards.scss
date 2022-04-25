@@ -144,6 +144,7 @@ div.steps__card{
 // cartes des plats
 
 .menu__card {
+    position: relative;
     width: 100%;
     background-color: $white;
     border-radius: $card-radius;
@@ -172,6 +173,8 @@ div.steps__card{
             padding-left: 10px;
         }
     }
+
+    
 }
 
 

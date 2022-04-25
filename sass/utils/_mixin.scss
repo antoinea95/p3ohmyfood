@@ -30,6 +30,29 @@
     padding: 30px 10px 30px 10px; 
 }
 
+// Boutons
+
+@mixin btn__shape{
+    width: 230px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+@mixin heart ($color: transparent) {
+    font-size: 1.8rem;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    color: $color;
+  }
+  
+  @mixin heart__gradient {
+    @include heart;
+    display: block;
+    background: $color-gradient;
+    -webkit-background-clip: text;
+  }
+
 // Responsive
 
 @mixin tablet-screen {

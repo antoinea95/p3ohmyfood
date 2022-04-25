@@ -242,6 +242,16 @@ div.container {
 }
 
 .btn {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  width: 230px;
+  height: 50px;
+  border-radius: 50px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -255,25 +265,109 @@ div.container {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(0deg, #9356DC, #FF79DA);
-  width: 230px;
-  height: 50px;
-  border-radius: 50px;
   margin: 15px 0 20px 0;
-  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn__link {
-  text-decoration: none;
   font-weight: 700;
   color: #fff;
   font-size: 1rem;
+  -webkit-transition: all 250ms;
+  transition: all 250ms;
 }
 
-span.btn__heart {
-  font-size: 1.4rem;
+.btn:hover {
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover::after {
+  opacity: 0.2;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #fff;
+  opacity: 0;
+}
+
+.checkbox__heart {
+  position: relative;
+  margin-bottom: 6px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.checkbox__heart input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox__heart input[type="checkbox"]:checked ~ .checkbox__heart--checked {
+  display: block;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.checkbox__heart--unchecked {
+  font-size: 1.8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #4d4d4d;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.checkbox__heart--unchecked:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.checkbox__heart--unchecked:hover::after {
+  opacity: 1;
+}
+
+.checkbox__heart--unchecked::after {
+  content: "\f004";
+  font-size: 1.8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  display: block;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  opacity: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.checkbox__heart--checked {
+  font-size: 1.8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  display: block;
+  background: -webkit-gradient(linear, left bottom, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 1;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
 div.steps__card {
@@ -493,6 +587,7 @@ div.steps__card--body p {
 }
 
 .menu__card {
+  position: relative;
   width: 100%;
   background-color: #fff;
   border-radius: 20px;
@@ -748,13 +843,14 @@ div.menu__title {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 0px 15px 10px 15px;
+  margin: 10px 15px 10px 15px;
 }
 
 @media screen and (min-width: 767px) {
   div.menu__title {
     max-width: 992px;
     margin: auto;
+    width: 97%;
   }
 }
 
