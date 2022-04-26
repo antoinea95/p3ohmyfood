@@ -153,6 +153,25 @@ div.steps__card{
     box-shadow: $shadow;
     margin: $margin-card;
     cursor: pointer;
+    animation: fadein 800ms backwards;
+
+    &--delay1 {
+        animation-delay: 100ms;
+    }
+
+    &--delay2 {
+        animation-delay: 200ms;
+    }
+
+    &--delay3 {
+        animation-delay: 300ms;
+    }
+
+    &--delay4 {
+        animation-delay: 400ms;
+    }
+
+
 
     input[type="checkbox"] {
         display: none;
@@ -181,6 +200,7 @@ div.steps__card{
     }
 
     &--price {
+        color: black;
         padding: 12px;
         font-weight: $bold;
         margin: 0px 5px 0px 5px;

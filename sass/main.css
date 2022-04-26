@@ -1,6 +1,37 @@
-/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@-webkit-keyframes fadein {
+  0% {
+    -webkit-transform: translateY(70%);
+            transform: translateY(70%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  0% {
+    -webkit-transform: translateY(70%);
+            transform: translateY(70%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -608,6 +639,28 @@ div.steps__card--body p {
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   margin: 10px 0;
   cursor: pointer;
+  -webkit-animation: fadein 800ms backwards;
+          animation: fadein 800ms backwards;
+}
+
+.menu__card--delay1 {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.menu__card--delay2 {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.menu__card--delay3 {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.menu__card--delay4 {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
 }
 
 .menu__card input[type="checkbox"] {
@@ -640,6 +693,7 @@ div.steps__card--body p {
 }
 
 .menu__card--price {
+  color: black;
   padding: 12px;
   font-weight: 700;
   margin: 0px 5px 0px 5px;
