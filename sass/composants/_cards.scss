@@ -7,7 +7,6 @@ div.steps__card{
     margin: $margin-card;
     @include flex (flex-start, center, row);
     width: 95%;
-    max-width: 400px;
     box-shadow: $shadow;
     white-space: nowrap;
 
@@ -143,38 +142,67 @@ div.steps__card{
 
 // cartes des plats
 
+
 .menu__card {
     position: relative;
+    overflow: hidden;
+    @include flex (space-between, flex-end, row);
     width: 100%;
     background-color: $white;
     border-radius: $card-radius;
     box-shadow: $shadow;
     margin: $margin-card;
-    padding: 12px;
+    cursor: pointer;
 
-
-    a {
-        text-decoration: none;
-        color: $color-txt;
+    input[type="checkbox"] {
+        display: none;
+    }
+    
+    input[type="checkbox"]:checked ~ .menu__card--select {
+        width: 25%;
+    
+        .selected {
+            transform: rotate(0);
+        }
     }
 
     &--body {
-        @include flex(space-between, center, row);
-        margin-right: 5px;
-
-        :nth-child(1) {
-            white-space: nowrap;
-            overflow: hidden;
+        width: 75%;
+        flex-grow: 1;
+        padding: 12px 0 12px 12px ;
+        margin-right: 5px; 
+        overflow: hidden;
+        
+        p,h3 {
             text-overflow: ellipsis;
-        }
-
-        :nth-child(2) {
-            font-weight: $bold;
-            padding-left: 10px;
+            overflow: hidden;
+            white-space: nowrap;  
         }
     }
 
-    
+    &--price {
+        padding: 12px;
+        font-weight: $bold;
+        margin: 0px 5px 0px 5px;
+    }
+
+    &--select {
+        @include flex;
+        width: 0;
+        height: 69px;
+        background-color: $color-tertiary;
+        transition: width 400ms ease-in-out;
+
+        .selected {
+            color: $white;
+            font-weight: $bold;
+            font-size: 2rem;
+            transform: rotate(270deg);
+            transition: transform 400ms ease-in-out 50ms;
+        }
+
+    }
+
 }
 
 

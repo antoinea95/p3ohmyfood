@@ -389,7 +389,6 @@ div.steps__card {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 95%;
-  max-width: 400px;
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   white-space: nowrap;
@@ -588,27 +587,71 @@ div.steps__card--body p {
 
 .menu__card {
   position: relative;
-  width: 100%;
-  background-color: #fff;
-  border-radius: 20px;
-  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  margin: 10px 0;
-  padding: 12px;
-}
-
-.menu__card a {
-  text-decoration: none;
-  color: #4d4d4d;
-}
-
-.menu__card--body {
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.menu__card input[type="checkbox"] {
+  display: none;
+}
+
+.menu__card input[type="checkbox"]:checked ~ .menu__card--select {
+  width: 25%;
+}
+
+.menu__card input[type="checkbox"]:checked ~ .menu__card--select .selected {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.menu__card--body {
+  width: 75%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 12px 0 12px 12px;
+  margin-right: 5px;
+  overflow: hidden;
+}
+
+.menu__card--body p, .menu__card--body h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.menu__card--price {
+  padding: 12px;
+  font-weight: 700;
+  margin: 0px 5px 0px 5px;
+}
+
+.menu__card--select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -616,18 +659,23 @@ div.steps__card--body p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-right: 5px;
+  width: 0;
+  height: 69px;
+  background-color: #99E2D0;
+  -webkit-transition: width 400ms ease-in-out;
+  transition: width 400ms ease-in-out;
 }
 
-.menu__card--body :nth-child(1) {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.menu__card--body :nth-child(2) {
+.menu__card--select .selected {
+  color: #fff;
   font-weight: 700;
-  padding-left: 10px;
+  font-size: 2rem;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  -webkit-transition: -webkit-transform 400ms ease-in-out 50ms;
+  transition: -webkit-transform 400ms ease-in-out 50ms;
+  transition: transform 400ms ease-in-out 50ms;
+  transition: transform 400ms ease-in-out 50ms, -webkit-transform 400ms ease-in-out 50ms;
 }
 
 section.location {
