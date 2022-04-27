@@ -1,24 +1,28 @@
 // Bouton principal
 
 .btn {
+
     position: relative;
     display: block;
     text-decoration: none;
     @include btn__shape;
     box-shadow: $shadow;
     background: $color-gradient;
-    @include flex; // centre le texte du bouton
+    @include flex;
     margin: 15px 0 20px 0;
     font-weight: $bold;
-    color: #fff;
+    color: $white;
     font-size: 1rem;
     transition: all 250ms;
 
     &:hover {
+
         box-shadow: 5px 5px 5px rgba($color: black, $alpha: 0.5);
+
         &::after {
             opacity: 0.2;
         }
+
     } // Anime l'opacité du pseudo-élément after et modifie l'ombre portée
 
     &::after {
@@ -27,19 +31,27 @@
         @include btn__shape;
         background-color: $white; 
         opacity: 0;
-}
+    }
 
 }
-
 
 // Bouton coeur
 
 .checkbox__heart {
-    position: relative;
-    margin-bottom: 6px;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 15px;
     width: 30px;
     height: 30px;
     cursor: pointer;
+
+    &--menu {
+        margin: 0 15px 5px 0;
+    }
+
+    // Animation du coeur au clique
 
     input[type="checkbox"] {
         display:none;
@@ -51,14 +63,18 @@
     }
 
     &--unchecked {
+
         @include heart($color-txt);
         transition: transform 250ms ease-in-out;
         
         &:hover {
+
           transform: scale(1.2);
+
           &::after {
             opacity: 1;
           }
+
         }
         
         &::after {
@@ -67,7 +83,7 @@
           opacity: 0;
           transform: scale(1);
           transition: transform 250ms ease-in-out;
-        }
+        } // Bordure du coeur en dégradé
     }
 
     &--checked {
@@ -76,6 +92,7 @@
         opacity: 1;
         transition: transform 250ms ease-in-out;
     }
+
 }
   
   

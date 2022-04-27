@@ -25,13 +25,9 @@
     opacity: 1;
   }
 
-  99% {
-    transform: translateX(0);
-  }
-
   100% {
     opacity: 0;
-    transform: translateX(999px);
+    visibility: hidden;
   }
 }
 

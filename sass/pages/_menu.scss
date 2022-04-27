@@ -1,9 +1,11 @@
 
 div.menu__content {
+
     @include bloc ($color-bg);
     border-radius: 35px 35px 0 0;
-
 }
+
+// Organisation des sections du menu en responsive
 
 div.menu__content--sections {
     
@@ -16,11 +18,13 @@ div.menu__content--sections {
     @include desktop-screen {
         @include screen-max-width ($desktop-width);
     }
-
-    
+ 
 }
 
+// Positionnement de l'image
+
 .menu__img {
+
     position: relative;
     width: 100%;
     height: 280px;
@@ -31,14 +35,18 @@ div.menu__content--sections {
         position: fixed;
         height: 350px;
         width: 100%;
-
     }
 
 }
 
+// Positionnement du nom du restaurant
+
 div.menu__title {
+
     @include flex(space-between, center, row);
-    margin: 10px 15px 10px 15px;
+    margin: auto;
+    position: relative;
+    width: 97%;
 
     @include tablet-screen {
         @include screen-max-width ($tablet-width);
@@ -50,25 +58,27 @@ div.menu__title {
     }
 }
 
+// Positionnement des sections du menu
+
 section.section {
+
     @include flex(space-between, flex-start, column);
-    padding: 15px 10px;
+    margin: $margin-bloc-cards;
 
     @include tablet-screen {
-        width: 50%;
+        width: 47%;
      }
 
     @include desktop-screen {
-        width: 33%;
+        width: 31%;
     }
 }
 
-.section__title {
-    margin-bottom: 5px;
+// Titre des sections du menu
 
-    h2 {
-        margin-bottom: 5px;
-    }
+.section__title {
+
+    margin-bottom: 5px;
 
     &--underline {
         background-color: $color-tertiary;
@@ -77,6 +87,9 @@ section.section {
     }
 }
 
-section.bloc__btn {
+// Positionnement du boutton commandé
+
+div.bloc__btn {
+
     @include flex;
 }

@@ -15,6 +15,7 @@
     <!--title-->
     <title>Ohmyfood!</title>
 </head>
+
 <body>
 
     <div class="spinner">
@@ -23,7 +24,7 @@
         <i class="fa-solid fa-burger spinner__food spinner__food--2"></i>
         <i class="fa-solid fa-pizza-slice spinner__food spinner__food--3"></i>
     </div>
-    
+
     <div class="container">
 
         <header class="header">
@@ -32,21 +33,19 @@
 
         <main class="main">
 
-            <section class="location">
+            <div class="location">
                 <i class="fa-solid fa-location-dot"></i>
                 <p>Paris, Belleville </p>
-            </section>
+            </div>
 
             <section class="intro">
                 <div class="intro__content">
                     <h2>Réservez le menu qui <br>vous convient</h2>
                     <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
                 </div>
-
                     <a href="#" class="btn">
                         <p>Explorer nos restaurants</p>
                     </a>
-    
             </section>
 
             <section class="fonctionnement">
@@ -88,119 +87,82 @@
 
                 <div class="restaurants">
                     
-                    
                     <div class="restaurant__card">
-
                         <a href="./html/menu1.html">
-
                             <div class="restaurant__card--img">
                                 <img src="./images/restaurants/palettedugout.jpg" alt="La palette du goût" class="restaurant__card--img1">
                                 <span class="restaurant__card--new"> Nouveau </span>
                             </div>
-
                             <div class="restaurant__card--body">
-
                                 <div class="restaurant__card--bodyText">
                                     <h3>La palette du goût</h3>
                                     <p>Ménilmontant</p>
                                 </div>
-
-                                <label class="checkbox__heart">
-                                    <input type="checkbox">
-                                    <i class="fa-regular fa-heart checkbox__heart--unchecked"></i>
-                                     <i class="fa-solid fa-heart checkbox__heart--checked"></i>
-                                    </input>
-                                </label>
-
                             </div>
-
-                         </a>
-
+                        </a>
+                        <label class="checkbox__heart">
+                            <input type="checkbox">
+                            <i class="fa-regular fa-heart checkbox__heart--unchecked"></i>
+                            <i class="fa-solid fa-heart checkbox__heart--checked"></i>
+                        </label>
                     </div>
 
                     <div class="restaurant__card">
-
                         <a href="./html/menu2.html">
-
                             <div class="restaurant__card--img">
                                 <img src="./images/restaurants/noteenchantee.jpg" alt="La note enchantée" class="restaurant__card--img2">
                                 <span class="restaurant__card--new"> Nouveau </span>
                             </div>
-
                             <div class="restaurant__card--body">
-
                                 <div class="restaurant__card--bodyText">
                                     <h3 >La note enchantée</h3>
                                     <p>Charonne</p>
                                 </div>
-
-                                <label class="checkbox__heart">
-                                    <input type="checkbox">
-                                    <i class="fa-regular fa-heart checkbox__heart--unchecked"></i>
-                                     <i class="fa-solid fa-heart checkbox__heart--checked"></i>
-                                    </input>
-                                </label>
-
                             </div>
-
-                         </a>
-
+                        </a>
+                        <label class="checkbox__heart">
+                            <input type="checkbox">
+                            <i class="fa-regular fa-heart checkbox__heart--unchecked"></i>
+                            <i class="fa-solid fa-heart checkbox__heart--checked"></i>
+                        </label>
                     </div>
 
                     <div class="restaurant__card">
-
                         <a href="./html/menu3.html">
-
                             <div class="restaurant__card--img">
                                 <img src="./images/restaurants/alafrancaise.jpg" alt="À la française" class="restaurant__card--img3">
                             </div>
-
                             <div class="restaurant__card--body">
-
                                 <div class="restaurant__card--bodyText">
                                     <h3>À la française</h3>
                                     <p>Cité Rouge</p>
                                 </div>
-
-                                <label class="checkbox__heart">
-                                    <input type="checkbox">
-                                    <i class="fa-regular fa-heart checkbox__heart--unchecked"></i>
-                                     <i class="fa-solid fa-heart checkbox__heart--checked"></i>
-                                    </input>
-                                </label>
-
                             </div>
-
-                         </a>
-
+                        </a>
+                        <label class="checkbox__heart">
+                            <input type="checkbox">
+                            <i class="fa-regular fa-heart checkbox__heart--unchecked"></i>
+                            <i class="fa-solid fa-heart checkbox__heart--checked"></i>
+                        </label>
                     </div>
 
                     <div class="restaurant__card">
-
                         <a href="./html/menu4.html">
-
                             <div class="restaurant__card--img">
                                 <img src="./images/restaurants/delicedessens.jpg" alt="Le délice des sens" class="restaurant__card--img4">
                             </div>
-
                             <div class="restaurant__card--body">
-
                                 <div class="restaurant__card--bodyText">
                                     <h3>Le délice des sens</h3>
                                     <p> Folie-Méricourt</p>
                                 </div>
-    
-                                <label class="checkbox__heart">
-                                    <input type="checkbox">
-                                    <i class="fa-regular fa-heart checkbox__heart--unchecked"></i>
-                                     <i class="fa-solid fa-heart checkbox__heart--checked"></i>
-                                    </input>
-                                </label>
-
                             </div>
-
-                         </a>
-
+                        </a>
+                        <label class="checkbox__heart">
+                            <input type="checkbox">
+                            <i class="fa-regular fa-heart checkbox__heart--unchecked"></i>
+                            <i class="fa-solid fa-heart checkbox__heart--checked"></i>
+                        </label>
                     </div>
                                   
                 </div>
@@ -210,17 +172,20 @@
         </main>
 
         <footer class="footer">
-            <span class="footer__title">
-                <h4> <a href="#">ohmyfood</a></h4>
-            </span>
+
+                <h4 class="footer__title"> <a href="#">ohmyfood</a></h4>
+
             <ul class="footer__list">
                 <li><a href="#"> <i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
                 <li><a href="#"> <i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
                 <li><a href="#"> <i class="fa-solid fa-scale-balanced"></i>Mentions légales</a></li>
                 <li><a href="mailto:contac@ohmyfood.com"><i class="fa-solid fa-paper-plane"></i>Contact</a></li>
             </ul>
+
         </footer>
+
     </div>
-    
+
 </body>
+
 </html>

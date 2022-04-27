@@ -39,14 +39,9 @@
   65% {
     opacity: 1;
   }
-  99% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
   100% {
     opacity: 0;
-    -webkit-transform: translateX(999px);
-            transform: translateX(999px);
+    visibility: hidden;
   }
 }
 
@@ -54,14 +49,9 @@
   65% {
     opacity: 1;
   }
-  99% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
   100% {
     opacity: 0;
-    -webkit-transform: translateX(999px);
-            transform: translateX(999px);
+    visibility: hidden;
   }
 }
 
@@ -163,7 +153,7 @@ h1.logo__title a {
   color: black;
 }
 
-div.menu__title h1 {
+div.menu__title h2 {
   font-family: "Shrikhand", serif;
   font-size: 1.8rem;
   color: black;
@@ -174,6 +164,7 @@ main.main h2 {
   color: black;
   font-weight: 700;
   font-size: 1.5rem;
+  margin-bottom: 5px;
   margin: 10px 10px 10px 10px;
 }
 
@@ -183,23 +174,29 @@ main.main h2 {
   }
 }
 
-.section__title h2 {
+.section__title h3 {
   text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
-h3 {
+.restaurant__card--body h3 {
   font-family: "Roboto", Helvetica, sans-serif;
   color: black;
   font-weight: 700;
   font-size: 1.2rem;
   margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
-.menu__card h3 {
+.menu__card h4 {
   font-family: "Roboto", Helvetica, sans-serif;
   color: black;
   font-weight: 700;
   font-size: 1.1rem;
+  margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 div.container {
@@ -254,19 +251,19 @@ div.container {
   padding: 20px 10px 20px 10px;
 }
 
-.footer__title h4 {
+.footer__title {
   font-family: "Shrikhand", serif;
   font-size: 1.2rem;
   margin: 10px;
 }
 
-.footer__title h4 a {
+.footer__title a {
   text-decoration: none;
   color: #fff;
 }
 
 @media screen and (min-width: 767px) {
-  .footer__title h4 {
+  .footer__title {
     text-align: center;
   }
 }
@@ -450,19 +447,6 @@ div.container {
   z-index: 1;
 }
 
-.food2 {
-  z-index: 2;
-  color: #FF79DA;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-
-.food3 {
-  color: #99E2D0;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
 .btn {
   position: relative;
   display: block;
@@ -515,11 +499,17 @@ div.container {
 }
 
 .checkbox__heart {
-  position: relative;
-  margin-bottom: 6px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 15px;
   width: 30px;
   height: 30px;
   cursor: pointer;
+}
+
+.checkbox__heart--menu {
+  margin: 0 15px 5px 0;
 }
 
 .checkbox__heart input[type="checkbox"] {
@@ -812,9 +802,9 @@ div.steps__card--body p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -888,7 +878,16 @@ div.steps__card--body p {
 }
 
 .menu__card input[type="checkbox"] {
-  display: none;
+  position: absolute;
+  width: 100%;
+  height: 69px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .menu__card input[type="checkbox"]:checked ~ .menu__card--select {
@@ -938,7 +937,7 @@ div.steps__card--body p {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 0;
-  height: 69px;
+  height: 75px;
   background-color: #99E2D0;
   -webkit-transition: width 400ms ease-in-out;
   transition: width 400ms ease-in-out;
@@ -956,7 +955,7 @@ div.steps__card--body p {
   transition: transform 400ms ease-in-out 50ms, -webkit-transform 400ms ease-in-out 50ms;
 }
 
-section.location {
+div.location {
   width: 100%;
   margin-top: 60px;
   padding: 15px;
@@ -978,7 +977,7 @@ section.location {
           box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.6);
 }
 
-section.location p, section.location i {
+div.location p, div.location i {
   font-weight: 700;
   font-size: 1rem;
   color: #353535;
@@ -1174,7 +1173,9 @@ div.menu__title {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 10px 15px 10px 15px;
+  margin: auto;
+  position: relative;
+  width: 97%;
 }
 
 @media screen and (min-width: 767px) {
@@ -1206,26 +1207,22 @@ section.section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 15px 10px;
+  margin: 15px 10px;
 }
 
 @media screen and (min-width: 767px) {
   section.section {
-    width: 50%;
+    width: 47%;
   }
 }
 
 @media screen and (min-width: 1280px) {
   section.section {
-    width: 33%;
+    width: 31%;
   }
 }
 
 .section__title {
-  margin-bottom: 5px;
-}
-
-.section__title h2 {
   margin-bottom: 5px;
 }
 
@@ -1235,7 +1232,7 @@ section.section {
   height: 3px;
 }
 
-section.bloc__btn {
+div.bloc__btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

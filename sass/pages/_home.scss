@@ -1,23 +1,32 @@
+// Animation après le spinner
+
 main.main {
     animation: fadein 1s ease-in-out 2s;
 }
 
+// Présentation du restaurant
+
 .intro {
+
     @include flex(space-around, center, column);
     @include bloc($color-bg);
     text-align: center;
 
-    &__content{
+    &__content {
         font-weight: $light;
-        margin: $margin-content;
+        margin: $margin-bloc-cards;
     }
+
 }
 
+// Tutoriel étapes
+
 section.fonctionnement {
+
     @include bloc ($white);
 
-    
     div.steps {
+
         @include bloc__content;
 
         @include tablet-screen {
@@ -29,12 +38,15 @@ section.fonctionnement {
         @include desktop-screen {
             @include screen-max-width($desktop-width);
             margin-top: $margin-top-cards;
-         }
+        }
     }
 
 }
 
+// Restautants
+
 article.article1 {
+    
     @include bloc ($color-bg);
 
     div.restaurants {
@@ -48,7 +60,7 @@ article.article1 {
             grid-template-rows: repeat(2, 1fr);
             grid-template-columns: repeat(2,1fr);
             column-gap: 20px;
-         }
+         } // Création d'une grid pour que les cartes se positionnent correctement
 
         @include desktop-screen {
             @include screen-max-width($desktop-width);

@@ -1,3 +1,5 @@
+// Couleurs
+
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
@@ -6,14 +8,24 @@ $color-txt: #4d4d4d;
 $color-bg: #f6f6f6;
 $white: #fff;
 
+// Ombre portée
+
 $shadow: 5px 5px 10px rgba($color: black, $alpha: 0.2);
+
+// Radius
 
 $card-radius: 20px;
 $bloc-radius: 15px 15px;
-$margin-content: 15px 10px;
+
+// Cartes
+
+$margin-bloc-cards: 15px 10px;
 $margin-card: 10px 0;
 $margin-top-cards: 30px;
 
+// Responsive
+
+$mobile-width: 480px;
 $tablet-width: 992px;
 $desktop-width: 1280px;
 

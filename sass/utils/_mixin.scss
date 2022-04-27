@@ -1,3 +1,5 @@
+// Flexbox
+
 @mixin flex ($justify: center, $items: center, $direction: row) {
     display: flex;
     justify-content: $justify;
@@ -5,24 +7,28 @@
     flex-direction: $direction;
 }
 
+// Titres
+
 @mixin main_title {
     font-family: $serif;
     font-size: 1.8rem;
     color: black;
 }
 
-@mixin second_title ($size) {
+@mixin second_title ($size, $weight) {
     font-family: $sans-serif;
     color: black;
-    font-weight: $bold;
+    font-weight: $weight;
     font-size: $size;
+    margin-bottom: 5px;
 }
+
+// Blocs
 
 @mixin bloc__content {
         @include flex(space-between, center, column);
-        margin: $margin-content;
+        margin: $margin-bloc-cards;
     }
-
 
 
 @mixin bloc ($bg: $white) {
@@ -32,7 +38,7 @@
 
 // Boutons
 
-@mixin btn__shape{
+@mixin btn__shape {
     width: 230px;
     height: 50px;
     border-radius: 50px;
@@ -52,6 +58,7 @@
     background: $color-gradient;
     -webkit-background-clip: text;
   }
+
 // cards
 
 @mixin card_hover {
@@ -63,6 +70,7 @@
     }
     
 }
+
 // Responsive
 
 @mixin tablet-screen {

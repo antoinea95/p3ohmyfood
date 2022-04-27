@@ -1,6 +1,7 @@
-// cartes étapes
+// Cartes étapes
 
-div.steps__card{
+div.steps__card {
+
     position: relative;
     background-color: $color-bg;
     border-radius: $card-radius;
@@ -21,7 +22,7 @@ div.steps__card{
         width: 32%;
     }
 
-    // positionnement bulle nombre
+    // Positionnement bulle nombre
 
     &--number {
         position: absolute;
@@ -43,12 +44,13 @@ div.steps__card{
             left: 0;
             right: 0;
             top: -20%;
-         }
+        } // Positionnement différent en affichage tablette et PC
     }
 
-    // positionnement corps de la carte
+    // Positionnement corps de la carte
 
     &--body {
+
         @include flex (flex-start, center, row);
         font-weight: $bold;
         padding: 25px;
@@ -56,13 +58,12 @@ div.steps__card{
         @include tablet-screen {
             @include flex (space-around, center, row);
             padding: 25px 20px;
-         }
+        }
 
         i {
             @include flex;
             width: 50px;
             font-size: 1.2rem;
-
 
             @include tablet-screen {
                 width: 20px;
@@ -71,15 +72,17 @@ div.steps__card{
 
         p {
             padding-left: 7%;
-            color: $color-txt;
+            color: $color-txt; // Permet de ne pas changer la couleur au moment du hover
         }
+
     }
 
 }
 
-// cartes restaurants
+// Cartes restaurants
 
 .restaurant__card {
+
     position: relative;
     width: 100%;
     border-radius: $card-radius;
@@ -87,13 +90,12 @@ div.steps__card{
     box-shadow: $shadow;
     @include card_hover;
 
-
     a {
         text-decoration: none;
         color: $color-txt;
     }
 
-    //bandeau nouveau
+    // Bandeau nouveau
 
     &--new {
         background-color: $color-tertiary;
@@ -106,12 +108,12 @@ div.steps__card{
         right: 4%;
         top: 6%;
         z-index: 1;
-
     }
 
-    // positionnement image
+    // Positionnement image
 
     &--img {
+
         border-radius: $bloc-radius 0 0;
         position: relative;
         overflow: hidden;
@@ -125,10 +127,11 @@ div.steps__card{
 
     }
 
-    // positionnement corps de la carte
+    // Positionnement corps de la carte
 
     &--body {
-        @include flex (space-between, center, row);
+
+        @include flex (space-between, flex-end, row);
         padding: 15px;
         border-radius: 0 0 $bloc-radius;
         background-color: $white;
@@ -142,10 +145,11 @@ div.steps__card{
 
 }
 
-// cartes des plats
+// Cartes des plats
 
 
 .menu__card {
+
     position: relative;
     overflow: hidden;
     @include flex (space-between, flex-end, row);
@@ -174,13 +178,23 @@ div.steps__card{
         animation-delay: 400ms;
     }
 
-
+    // Animation selectionné
 
     input[type="checkbox"] {
-        display: none;
+        position: absolute;
+        width: 100%;
+        height: 69px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 2;
+        opacity: 0;
+        cursor: pointer;
     }
     
     input[type="checkbox"]:checked ~ .menu__card--select {
+
         width: 25%;
     
         .selected {
@@ -189,6 +203,7 @@ div.steps__card{
     }
 
     &--body {
+
         width: 75%;
         flex-grow: 1;
         padding: 12px 0 12px 12px ;
@@ -203,6 +218,7 @@ div.steps__card{
     }
 
     &--price {
+
         color: black;
         padding: 12px;
         font-weight: $bold;
@@ -210,11 +226,12 @@ div.steps__card{
     }
 
     &--select {
+
         @include flex;
         width: 0;
-        height: 69px;
+        height: 75px;
         background-color: $color-tertiary;
-        transition: width 400ms ease-in-out;
+        transition: width 400ms ease-in-out; // apparition du bloc selectionné
 
         .selected {
             color: $white;
@@ -222,7 +239,7 @@ div.steps__card{
             font-size: 2rem;
             transform: rotate(270deg);
             transition: transform 400ms ease-in-out 50ms;
-        }
+        } // rotation de l'icône
 
     }
 

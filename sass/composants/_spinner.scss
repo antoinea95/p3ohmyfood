@@ -1,6 +1,6 @@
 .spinner {
     height: 100vh;
-    z-index: 1000;
+    z-index: 1000; // Premier-plan
     position: fixed;
     top: 0;
     bottom: 0;
@@ -9,9 +9,10 @@
     margin: auto;
     @include flex;
     background-color: $color-bg;
-    animation: spinner-bg 3.2s ease-in-out both;
+    animation: spinner-bg 3.2s ease-in-out both; // Arrière-plan disparaît en fondu;
 
     &__food {
+
         position: absolute;
         animation: spinner 2s ease-out 200ms both;
 
@@ -35,23 +36,4 @@
             @include spinner-food ($color-tertiary, 1.7s, 1);
         }
     }
-    
-  }
-  
-  .fa-solid, p {
-  }
-    
-  
-
-  
-  .food2 {
-    z-index: 2;
-    color: $color-secondary;
-    animation-delay: 2s;
-    
-  }
-    
-    .food3 {
-      color: $color-tertiary;
-      animation-delay: 3s;
-    }
+}

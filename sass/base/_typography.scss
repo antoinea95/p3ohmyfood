@@ -1,13 +1,18 @@
+// Import google fonts API
 
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+// Variables fonts
+
 $sans-serif: 'Roboto', Helvetica, sans-serif;
 $serif: 'Shrikhand', serif; 
 
+// Variables font-weight
 $light: 300;
 $normal: 400;
 $bold: 700;
+
 
 
 body {
@@ -17,6 +22,7 @@ body {
 }
 
 h1.logo__title {
+
     @include main_title;
     text-align: center;
     padding-top: 10px;
@@ -27,30 +33,31 @@ h1.logo__title {
     }
 }
 
-div.menu__title h1 {
+div.menu__title h2 {
     @include main_title;
 }
 
 main.main h2 {
+
     @include second_title(1.5rem);
     margin: 10px 10px 10px 10px;
 
     @include tablet-screen {
         text-align: center;
-     }
+    }
 }
 
-.section__title h2 {
+.section__title h3 {
     text-transform: uppercase;
+    @include second_title (1rem, $normal)
 }
 
-h3 {
-    @include second_title(1.2rem);
-    margin-bottom: 5px;
+.restaurant__card--body h3 {
+    @include second_title(1.2rem, $bold);
 }
 
-.menu__card h3 {
-    @include second_title(1.1rem);
+.menu__card h4 {
+    @include second_title(1.1rem, $bold);
 }
 
 
