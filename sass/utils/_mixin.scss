@@ -52,7 +52,17 @@
     background: $color-gradient;
     -webkit-background-clip: text;
   }
+// cards
 
+@mixin card_hover {
+    transform: scale(1);
+    transition: transform 300ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+    
+}
 // Responsive
 
 @mixin tablet-screen {
@@ -71,6 +81,15 @@
 @mixin screen-max-width ($screen) {
     max-width: $screen;
     margin: auto;
+}
+
+// spinner
+
+@mixin spinner-food ($color, $delay, $index) {
+    font-size: 80px;
+    color: $color;
+    animation-delay: $delay;
+    z-index: $index;
 }
 
 

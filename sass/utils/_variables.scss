@@ -17,21 +17,3 @@ $margin-top-cards: 30px;
 $tablet-width: 992px;
 $desktop-width: 1280px;
 
-@keyframes fadein {
-
-    0% {
-        transform: translateY(70%);
-        opacity: 0;
-    }
-
-
-    50% {
-        opacity: 0.5;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    
-}

@@ -1,0 +1,57 @@
+.spinner {
+    height: 100vh;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    @include flex;
+    background-color: $color-bg;
+    animation: spinner-bg 3.2s ease-in-out both;
+
+    &__food {
+        position: absolute;
+        animation: spinner 2s ease-out 200ms both;
+
+        &--0 {
+            color: black;
+            font-family: 'Shrikhand';
+            font-size: 100px;
+            z-index: 4;
+        }
+
+        &--1 {
+            @include spinner-food ($color-primary, 700ms, 3);
+
+        }
+
+        &--2 {
+            @include spinner-food ($color-secondary, 1.2s, 2);
+        }
+
+        &--3 {
+            @include spinner-food ($color-tertiary, 1.7s, 1);
+        }
+    }
+    
+  }
+  
+  .fa-solid, p {
+  }
+    
+  
+
+  
+  .food2 {
+    z-index: 2;
+    color: $color-secondary;
+    animation-delay: 2s;
+    
+  }
+    
+    .food3 {
+      color: $color-tertiary;
+      animation-delay: 3s;
+    }

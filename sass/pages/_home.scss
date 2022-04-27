@@ -1,5 +1,6 @@
-
-
+main.main {
+    animation: fadein 1s ease-in-out 2s;
+}
 
 .intro {
     @include flex(space-around, center, column);

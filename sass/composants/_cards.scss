@@ -9,6 +9,7 @@ div.steps__card{
     width: 95%;
     box-shadow: $shadow;
     white-space: nowrap;
+    @include card_hover;
 
     &:hover {
         background-color: rgba($color-primary, 0.2);
@@ -84,6 +85,7 @@ div.steps__card{
     border-radius: $card-radius;
     margin: $margin-card;
     box-shadow: $shadow;
+    @include card_hover;
 
 
     a {
@@ -154,6 +156,7 @@ div.steps__card{
     margin: $margin-card;
     cursor: pointer;
     animation: fadein 800ms backwards;
+    @include card_hover;
 
     &--delay1 {
         animation-delay: 100ms;
