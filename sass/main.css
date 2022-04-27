@@ -176,9 +176,11 @@ main.main h2 {
 
 .section__title h3 {
   text-transform: uppercase;
-  margin-bottom: 5px;
+  font-family: "Roboto", Helvetica, sans-serif;
+  color: black;
   font-weight: 400;
   font-size: 1rem;
+  margin-bottom: 5px;
 }
 
 .restaurant__card--body h3 {
@@ -187,7 +189,6 @@ main.main h2 {
   font-weight: 700;
   font-size: 1.2rem;
   margin-bottom: 5px;
-  margin-bottom: 5px;
 }
 
 .menu__card h4 {
@@ -195,7 +196,6 @@ main.main h2 {
   color: black;
   font-weight: 700;
   font-size: 1.1rem;
-  margin-bottom: 5px;
   margin-bottom: 5px;
 }
 
@@ -909,7 +909,7 @@ div.steps__card--body p {
   overflow: hidden;
 }
 
-.menu__card--body p, .menu__card--body h3 {
+.menu__card--body p, .menu__card--body h4 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;

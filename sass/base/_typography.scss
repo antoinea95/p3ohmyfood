@@ -39,7 +39,7 @@ div.menu__title h2 {
 
 main.main h2 {
 
-    @include second_title(1.5rem);
+    @include second_title(1.5rem, $bold);
     margin: 10px 10px 10px 10px;
 
     @include tablet-screen {
@@ -49,7 +49,7 @@ main.main h2 {
 
 .section__title h3 {
     text-transform: uppercase;
-    @include second_title (1rem, $normal)
+    @include second_title (1rem, $normal);
 }
 
 .restaurant__card--body h3 {
@@ -57,7 +57,7 @@ main.main h2 {
 }
 
 .menu__card h4 {
-    @include second_title(1.1rem, $bold);
+    @include second_title(1.1rem, $bold); 
 }
 
 
