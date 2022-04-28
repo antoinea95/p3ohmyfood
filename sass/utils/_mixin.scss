@@ -56,8 +56,8 @@
     @include heart;
     display: block;
     background: $color-gradient;
-    background-clip: text;
-  }
+    -webkit-background-clip : text;
+}
 
 // cards
 
