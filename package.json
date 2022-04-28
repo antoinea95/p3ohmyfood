@@ -1,0 +1,19 @@
+{
+  "name": "p3ohmyfood",
+  "version": "1.0.0",
+  "description": "\"Projet 3 OCR - Parcours développeur web",
+  "main": "index.js",
+  "scripts": {
+    "sass":"sass --watch ./sass/main.scss:./public/css/style.css --style compressed "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoinea95/ohmyfood.github.io"
+  },
+  "author": "Antoine Amoroso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antoinea95/p3ohmyfood/issues"
+  },
+  "homepage": "https://github.com/antoinea95/p3ohmyfood#readme"
+}

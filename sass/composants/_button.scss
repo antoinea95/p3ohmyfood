@@ -3,7 +3,6 @@
 .btn {
 
     position: relative;
-    display: block;
     text-decoration: none;
     @include btn__shape;
     box-shadow: $shadow;
@@ -13,14 +12,14 @@
     font-weight: $bold;
     color: $white;
     font-size: 1rem;
-    transition: all 250ms;
+    transition: all 200ms ease-out;
 
     &:hover {
 
-        box-shadow: 5px 5px 5px rgba($color: black, $alpha: 0.5);
+        box-shadow: 5px 5px 5px rgba($color: black, $alpha: 0.4);
 
         &::after {
-            opacity: 0.2;
+            opacity: 0.1;
         }
 
     } // Anime l'opacité du pseudo-élément after et modifie l'ombre portée
@@ -59,17 +58,17 @@
       
     input[type="checkbox"]:checked~.checkbox__heart--checked {
         display: block;
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 
     &--unchecked {
 
         @include heart($color-txt);
-        transition: transform 250ms ease-in-out;
+        transition: transform 200ms linear;
         
         &:hover {
 
-          transform: scale(1.2);
+          transform: scale(1.1);
 
           &::after {
             opacity: 1;
@@ -82,7 +81,7 @@
           @include heart__gradient;
           opacity: 0;
           transform: scale(1);
-          transition: transform 250ms ease-in-out;
+          transition: transform 200ms linear;
         } // Bordure du coeur en dégradé
     }
 
@@ -90,7 +89,7 @@
         @include heart__gradient;
         transform: scale(0);
         opacity: 1;
-        transition: transform 250ms ease-in-out;
+        transition: transform 200ms ease-out;
     }
 
 }
