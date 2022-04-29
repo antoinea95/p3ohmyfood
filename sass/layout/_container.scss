@@ -2,4 +2,9 @@
 div.container {
     height: 100vh;
     margin: auto;
+
+    @include desktop-screen {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
 }
