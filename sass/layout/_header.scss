@@ -2,7 +2,7 @@
 
     position: fixed; // reste affiché même losque l'on scroll
     background-color: $white;
-    box-shadow: $shadow;
+    @include shadow;
     z-index: 2;
     width: 100%;
     padding: 5px;

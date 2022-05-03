@@ -8,7 +8,7 @@ div.steps__card {
     margin: $margin-card;
     @include flex (flex-start, center, row);
     width: 95%;
-    box-shadow: $shadow;
+    @include shadow;
     white-space: nowrap;
     @include card_hover;
 
@@ -87,7 +87,7 @@ div.steps__card {
     width: 100%;
     border-radius: $card-radius;
     margin: $margin-card;
-    box-shadow: $shadow;
+    @include shadow;
     @include card_hover;
 
     a {
@@ -156,7 +156,7 @@ div.steps__card {
     width: 100%;
     background-color: $white;
     border-radius: $card-radius;
-    box-shadow: $shadow;
+    @include shadow;
     margin: $margin-card;
     cursor: pointer;
     animation: fadein 800ms backwards;
